@@ -1,0 +1,2 @@
+<button mat-raised-button color="primary" *ngIf="!(auth.isAuthenticated$ | async)" (click)="auth.loginWithRedirect()">Login</button>
+<button mat-raised-button color="accent" *ngIf="auth.isAuthenticated$ | async" (click)="auth.logout({ returnTo: document.location.origin })">Logout</button>
